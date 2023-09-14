@@ -1,5 +1,3 @@
-const { showSuccessToast } = require('./utils/helpers/Toast');
-
 // Scripts for firebase and firebase messaging
 importScripts(
     'https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js'
@@ -31,5 +29,5 @@ messaging.onBackgroundMessage(function (payload) {
         body: payload.notification.body,
     };
 
-    showSuccessToast(`${notificationTitle}, ${notificationOptions}`);
+    alert(`${notificationTitle}, ${notificationOptions}`);
 });
